@@ -1,0 +1,259 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #fff0f6; /* rosa bem claro */
+    color: #4a2c3a; /* tom escuro para texto */
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#main {
+    width: 100%;
+    max-width: 1100px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+    padding: 30px 40px;
+}
+
+#header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #d6336c; /* rosa forte */
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Formulário */
+#formulario_mural form {
+    background: #ffe6f0;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(214, 51, 108, 0.2);
+    margin-bottom: 40px;
+}
+
+#formulario_mural label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #a8325a;
+    font-size: 1.1rem;
+}
+
+#formulario_mural input[type="text"],
+#formulario_mural input[type="number"],
+#formulario_mural textarea,
+#formulario_mural input[type="file"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 2px solid #f7c6d0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+#formulario_mural input[type="text"]:focus,
+#formulario_mural input[type="number"]:focus,
+#formulario_mural textarea:focus,
+#formulario_mural input[type="file"]:focus {
+    border-color: #d6336c;
+    outline: none;
+}
+
+#formulario_mural textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#formulario_mural .btn {
+    background: #d6336c;
+    color: #fff;
+    border: none;
+    padding: 14px 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#formulario_mural .btn:hover {
+    background: #a8325a;
+}
+
+/* Container dos produtos */
+.escolha_um_nome-container,
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Card do produto */
+.produto {
+    background: #fff0f6;
+    border: 2px solid #f7c6d0;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(214, 51, 108, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(214, 51, 108, 0.3);
+}
+
+.produto p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #6a2c4a;
+}
+
+.produto p strong {
+    color: #d6336c;
+}
+
+.produto img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+    object-fit: cover;
+    height: 180px;
+    box-shadow: 0 4px 10px rgba(214, 51, 108, 0.2);
+}
+
+/* Link de ação (Excluir, Editar) */
+.produto a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #d6336c;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #d6336c;
+    padding: 6px 14px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.produto a:hover {
+    background-color: #d6336c;
+    color: #fff;
+}
+
+/* Formulário de edição dentro do card */
+.produto form {
+    margin-top: 15px;
+}
+
+.produto form input[type="text"],
+.produto form input[type="number"],
+.produto form textarea {
+    width: 100%;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border: 2px solid #f7c6d0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.produto form input[type="text"]:focus,
+.produto form input[type="number"]:focus,
+.produto form textarea:focus {
+    border-color: #d6336c;
+    outline: none;
+}
+
+.produto form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+.produto form input[type="submit"] {
+    background: #d6336c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.produto form input[type="submit"]:hover {
+    background: #a8325a;
+}
+
+.produto form a {
+    color: #a8325a;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.produto form a:hover {
+    text-decoration: underline;
+}
+
+/* Mensagem quando não há produtos */
+.no-products {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #a8325a;
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #a8325a;
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #main {
+        padding: 20px 15px;
+    }
+
+    #header h1 {
+        font-size: 2rem;
+    }
+
+    #formulario_mural form {
+        padding: 20px 15px;
+    }
+
+    .produto img {
+        height: 140px;
+    }
+}
